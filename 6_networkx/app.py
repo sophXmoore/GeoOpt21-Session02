@@ -7,7 +7,6 @@ app = Flask(__name__)
 hops = hs.Hops(app)
 
 
-
 @hops.component(
     "/createGraph",
     name = "Create Graph",

@@ -18,9 +18,10 @@ hops = hs.Hops(app)
     "/createRandomPoints",
     name = "Create Random Points",
     inputs=[
-        hs.HopsInteger("Count", "C", "Number of Random Points", hs.HopsParamAccess.ITEM, default= 1),
-        hs.HopsNumber("X range of randomness", "X", "Maximum randomness in X directon", hs.HopsParamAccess.ITEM),
-        hs.HopsNumber("Y range of randomness", "Y", "Maximum randomness in Y directon", hs.HopsParamAccess.ITEM)
+        
+        hs.HopsInteger("X range of randomness", "X", "Maximum randomness in X directon", hs.HopsParamAccess.ITEM),
+        hs.HopsInteger("Y range of randomness", "Y", "Maximum randomness in Y directon", hs.HopsParamAccess.ITEM),
+        hs.HopsInteger("Count", "C", "Number of Random Points", hs.HopsParamAccess.ITEM, default= 1)
 
     ],
     outputs=[
@@ -28,7 +29,7 @@ hops = hs.Hops(app)
     ]
 )
 def createRandomPoints(count,rX, rY):
-
+    print(count)
     randomPts = []
     for i in range(count):
 
